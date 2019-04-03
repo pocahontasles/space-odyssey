@@ -4,8 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Space Odyssey</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
   <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="build/css/all.css">
 
@@ -16,10 +25,10 @@
     <div class="flex-header">
       <a href="#main"><img src="images/LOGO.png" alt="logo"></a>
       <nav class="desktop-menu">
-        <a href="#about">ABOUT</a>
-        <a href="#process"> PROCESS </a>
-        <a href="#station">OUR STATION </a>
-        <a href="#contact">BOOK A TRIP</a>
+        <a href="#about" class="scroll-about">ABOUT</a>
+        <a href="#process" class="scroll-process"> PROCESS </a>
+        <a href="#station" class="scroll-station">OUR STATION </a>
+        <a href="#contact" class="scroll-book">BOOK A TRIP</a>
       </nav>
       <div class="dropdown">
         <button class="dropbtn">
@@ -34,10 +43,10 @@
           </svg>
         </button>
         <div class="dropdown-content">
-          <a href="#about">ABOUT</a>
-          <a href="#process"> PROCESS </a>
-          <a href="#station">OUR STATION </a>
-          <a href="#contact">BOOK A TRIP</a>
+          <a href="#about" class="scroll-about">ABOUT</a>
+          <a href="#process" class="scroll-process"> PROCESS </a>
+          <a href="#station" class="scroll-station">OUR STATION </a>
+          <a href="#contact" class="scroll-book">BOOK A TRIP</a>
         </div>
       </div>
     </div>
@@ -59,25 +68,29 @@
 <section id="about">
   <div class="wrapper container">
     <h2>WE PROPOSE YOU</h2>
-    <div class="flex-proposals">
+
+    <div class="slider-container">
       <div class="proposals-item">
         <div><img class="animate" src="images/icon_clock.svg" alt="icon"></div>
         <p>24 hours in space
           alone with stars
           and planets</p>
       </div>
+
       <div class="proposals-item">
         <div><img class="animate-two" src="images/icon_rocket-ship.svg" alt="icon"></div>
         <p>Trustworthy
           and newest
           equipment from NASA</p>
       </div>
+
       <div class="proposals-item">
         <div><img class="animate-three" src="images/icon_astronaut.svg" alt="icon"></div>
         <p>All-time support
           from the
           best specialists</p>
       </div>
+
       <div class="proposals-item">
         <div><img class="animate-four" src="images/icon_planets.svg" alt="icon"></div>
         <p>Unforgettable
@@ -111,6 +124,7 @@
 </section>
 <section id="process">
   <img src="images/img_moon@2x.png" alt="moon" class="moon-abs">
+  <img src="images/img_astronaut@3x.png" alt="astronaut" class="astr-abs">
   <div class="wrapper container">
     <h2>HOW DOES IT WORK?</h2>
     <div class="bar__container">
@@ -123,29 +137,33 @@
     </div>
     <section id="cards">
       <div class="card">
-        <p class="card__text"> <span class="hidden-heading">1.REGISTRATION:</span> You need to fill the short form below. Our manager helps you to choose a suitable
+        <p class="card__text"><span class="hidden-heading">1.REGISTRATION:</span> You need to fill the short form below.
+          Our manager helps you to choose a suitable
           program for you and proceed with the payment. </p>
       </div>
 
       <div class="card">
-        <p class="card__text"><span class="hidden-heading">2.HEALTH CHECK:</span> You need to fill the short form below. Our manager helps you to choose a suitable
+        <p class="card__text"><span class="hidden-heading">2.HEALTH CHECK:</span> You need to fill the short form below.
+          Our manager helps you to choose a suitable
           program for you and proceed with the payment.</p>
       </div>
 
       <div class="card">
-        <p class="card__text"><span class="hidden-heading">3.SHORT INSTRUCTIONS:</span> You need to fill the short form below. Our manager helps you to choose a suitable
+        <p class="card__text"><span class="hidden-heading">3.SHORT INSTRUCTIONS:</span> You need to fill the short form
+          below. Our manager helps you to choose a suitable
           program for you and proceed with the payment.</p>
       </div>
 
 
       <div class="card">
-        <p class="card__text"><span class="hidden-heading">4.FLIGHT TO THE STAR:</span> You need to fill the short form below. Our manager helps you to choose a suitable
+        <p class="card__text"><span class="hidden-heading">4.FLIGHT TO THE STAR:</span> You need to fill the short form
+          below. Our manager helps you to choose a suitable
           program for you and proceed with the payment.</p>
       </div>
     </section>
     <button class="show-modal book-button">BOOK NOW >></button>
   </div>
-  <img src="images/img_astronaut@3x.png" alt="astronaut" class="astr-abs">
+
 </section>
 
 <section id="station">
@@ -202,10 +220,12 @@
   </div>
 </footer>
 <a class="back_to_top" title="Back to top"></a>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="application/javascript"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+
+<!--<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="application/javascript"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>-->
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
